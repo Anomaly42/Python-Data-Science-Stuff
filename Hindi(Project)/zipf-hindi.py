@@ -2,10 +2,12 @@ import matplotlib.pyplot as plt
 from matplotlib.font_manager import FontProperties
 from collections import Counter
 
+filename  = "chandrakanta.txt"
+
 prop = FontProperties()
 prop.set_file('Lohit-Devanagari.ttf')
 
-file = open('karmabhoomi.txt', mode='r' , encoding='utf-8')
+file = open(filename, mode='r' , encoding='utf-8')
 data = file.read()
 
 redundant = ',।\'\"?.!<>=1234567890'
@@ -34,4 +36,5 @@ for i, unit in enumerate(ftlist):
     if unit[0] > 10:
         plt.annotate(unit[1] + " -" + str(ylist[i]), (i, ylist[i]), fontproperties=prop)
     
+plt.title(filename.replace('.txt', ''))
 plt.show()
