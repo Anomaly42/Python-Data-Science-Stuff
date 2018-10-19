@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-import numpy as np
 from matplotlib.font_manager import FontProperties
 from collections import Counter
 
